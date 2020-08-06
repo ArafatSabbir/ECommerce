@@ -37,5 +37,8 @@ C:\Users\sabbi\Desktop\ECommerce\ECommerce.Web\obj\Debug\netcoreapp2.1\ECommerce
 C:\Users\sabbi\Desktop\ECommerce\ECommerce.Web\obj\Debug\netcoreapp2.1\ECommerce.Web.pdb
 C:\Users\sabbi\Desktop\ECommerce\ECommerce.Web\obj\Debug\netcoreapp2.1\ECommerce.Web.genruntimeconfig.cache
 C:\Users\sabbi\Desktop\ECommerce\ECommerce.Web\obj\Debug\netcoreapp2.1\ECommerce.Web.csproj.CopyComplete
+C:\Users\sabbi\Desktop\ECommerce\ECommerce.Web\bin\Debug\netcoreapp2.1\ECommerce.Data.dll
+C:\Users\sabbi\Desktop\ECommerce\ECommerce.Web\bin\Debug\netcoreapp2.1\ECommerce.Data.pdb
 C:\Users\sabbi\Desktop\ECommerce\ECommerce.Web\obj\Debug\netcoreapp2.1\ECommerce.Web.csproj.CoreCompileInputs.cache
 C:\Users\sabbi\Desktop\ECommerce\ECommerce.Web\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+C:\Users\sabbi\Desktop\ECommerce\ECommerce.Web\obj\Debug\netcoreapp2.1\Razor\Areas\Admin\Controllers\Index.cshtml.g.cs
