@@ -1,0 +1,9 @@
+C:\Users\sabbi\Desktop\ECommerce\ECommerce.Data\bin\Debug\netcoreapp2.1\ECommerce.Data.deps.json
+C:\Users\sabbi\Desktop\ECommerce\ECommerce.Data\bin\Debug\netcoreapp2.1\ECommerce.Data.dll
+C:\Users\sabbi\Desktop\ECommerce\ECommerce.Data\obj\Debug\netcoreapp2.1\ECommerce.Data.csprojAssemblyReference.cache
+C:\Users\sabbi\Desktop\ECommerce\ECommerce.Data\obj\Debug\netcoreapp2.1\ECommerce.Data.AssemblyInfoInputs.cache
+C:\Users\sabbi\Desktop\ECommerce\ECommerce.Data\obj\Debug\netcoreapp2.1\ECommerce.Data.AssemblyInfo.cs
+C:\Users\sabbi\Desktop\ECommerce\ECommerce.Data\bin\Debug\netcoreapp2.1\ECommerce.Data.pdb
+C:\Users\sabbi\Desktop\ECommerce\ECommerce.Data\obj\Debug\netcoreapp2.1\ECommerce.Data.csproj.CoreCompileInputs.cache
+C:\Users\sabbi\Desktop\ECommerce\ECommerce.Data\obj\Debug\netcoreapp2.1\ECommerce.Data.dll
+C:\Users\sabbi\Desktop\ECommerce\ECommerce.Data\obj\Debug\netcoreapp2.1\ECommerce.Data.pdb
