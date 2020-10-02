@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7CAmNe5nMfhhDIRoVd0yEYFy1WbfkmcZD4xlaS4J/vk+gtOBYqEtG+Vg8xXHIkl9jkL90d3hc7/7cRwDLKvORg==",
+  "dgSpecHash": "NBXbTh5DXXVVOTk1vG5Y8+WjMYcM3qzric42gQVDlEr49KdkiQjxSWIu7pG5amjZ6UQJ68ideyAmtj+XPyc4sA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sabbi\\Desktop\\ECommerce\\ECommerce.Web\\ECommerce.Web.csproj",
+  "projectFilePath": "C:\\Users\\sabbi\\Desktop\\GitHub\\ECommerce\\ECommerce.Web\\ECommerce.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sabbi\\.nuget\\packages\\autofac\\5.2.0\\autofac.5.2.0.nupkg.sha512",
     "C:\\Users\\sabbi\\.nuget\\packages\\autofac.extensions.dependencyinjection\\6.0.0\\autofac.extensions.dependencyinjection.6.0.0.nupkg.sha512",
