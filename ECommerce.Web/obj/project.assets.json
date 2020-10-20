@@ -12750,11 +12750,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sabbi\\Desktop\\ECommerce\\ECommerce.Web\\ECommerce.Web.csproj",
+      "projectUniqueName": "C:\\Users\\sabbi\\Desktop\\GitHub\\ECommerce\\ECommerce.Web\\ECommerce.Web.csproj",
       "projectName": "ECommerce.Web",
-      "projectPath": "C:\\Users\\sabbi\\Desktop\\ECommerce\\ECommerce.Web\\ECommerce.Web.csproj",
+      "projectPath": "C:\\Users\\sabbi\\Desktop\\GitHub\\ECommerce\\ECommerce.Web\\ECommerce.Web.csproj",
       "packagesPath": "C:\\Users\\sabbi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sabbi\\Desktop\\ECommerce\\ECommerce.Web\\obj\\",
+      "outputPath": "C:\\Users\\sabbi\\Desktop\\GitHub\\ECommerce\\ECommerce.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sabbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -12770,8 +12770,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\sabbi\\Desktop\\ECommerce\\ECommerce.Data\\ECommerce.Data.csproj": {
-              "projectPath": "C:\\Users\\sabbi\\Desktop\\ECommerce\\ECommerce.Data\\ECommerce.Data.csproj"
+            "C:\\Users\\sabbi\\Desktop\\GitHub\\ECommerce\\ECommerce.Data\\ECommerce.Data.csproj": {
+              "projectPath": "C:\\Users\\sabbi\\Desktop\\GitHub\\ECommerce\\ECommerce.Data\\ECommerce.Data.csproj"
             }
           }
         }
@@ -12833,7 +12833,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

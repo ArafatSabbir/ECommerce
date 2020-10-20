@@ -1,0 +1,9 @@
+C:\Users\sabbi\Desktop\GitHub\ECommerce\ECommerce.Core\bin\Debug\netcoreapp3.1\ECommerce.Core.deps.json
+C:\Users\sabbi\Desktop\GitHub\ECommerce\ECommerce.Core\bin\Debug\netcoreapp3.1\ECommerce.Core.dll
+C:\Users\sabbi\Desktop\GitHub\ECommerce\ECommerce.Core\obj\Debug\netcoreapp3.1\ECommerce.Core.csprojAssemblyReference.cache
+C:\Users\sabbi\Desktop\GitHub\ECommerce\ECommerce.Core\obj\Debug\netcoreapp3.1\ECommerce.Core.AssemblyInfoInputs.cache
+C:\Users\sabbi\Desktop\GitHub\ECommerce\ECommerce.Core\obj\Debug\netcoreapp3.1\ECommerce.Core.AssemblyInfo.cs
+C:\Users\sabbi\Desktop\GitHub\ECommerce\ECommerce.Core\bin\Debug\netcoreapp3.1\ECommerce.Core.pdb
+C:\Users\sabbi\Desktop\GitHub\ECommerce\ECommerce.Core\obj\Debug\netcoreapp3.1\ECommerce.Core.csproj.CoreCompileInputs.cache
+C:\Users\sabbi\Desktop\GitHub\ECommerce\ECommerce.Core\obj\Debug\netcoreapp3.1\ECommerce.Core.dll
+C:\Users\sabbi\Desktop\GitHub\ECommerce\ECommerce.Core\obj\Debug\netcoreapp3.1\ECommerce.Core.pdb
