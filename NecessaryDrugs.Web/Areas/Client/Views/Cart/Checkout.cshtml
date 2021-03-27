@@ -1,0 +1,76 @@
+﻿@model NecessaryDrugs.Web.Areas.Client.Models.InvoiceModel
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <form action="/client/cart/checkout" method="post">
+        <input type="hidden" name="UserId" value="@Model.UserId" />
+        <div class="col-md-12 p-2 bg-white text-center">
+            <div class="p-3">
+                <h2>Invoice</h2>
+                <hr />
+                <dl class="text-left row">
+                    <dt class="col-sm-3">
+                        Name :
+                    </dt>
+                    <dd class="col-sm-9">
+                        <p class="text-dark">@Model.UserName</p>
+                    </dd>
+                    <dt class="col-sm-3">
+                        Adress :
+                    </dt>
+                    <dd class="col-sm-9">
+                        <input type="text" class="form-control" name="Adress" value="@Model.Adress" />
+                    </dd>
+                    <dt class="col-sm-3">
+                        Contact No :
+                    </dt>
+                    <dd class="col-sm-9">
+                        <input type="text" class="form-control" name="ContactNo" value="@Model.ContactNo" />
+                    </dd>
+                </dl>
+                <div class="col-md-12">
+                    <h2 class="h3 mb-3 text-black">Your Order</h2>
+                    <div class="p-3 p-lg-5 border">
+                        <table class="table site-block-order-table mb-3">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.MedList)
+                                {
+                                    <tr>
+                                        <td>@item.MedName <strong class="mx-2">x</strong> @item.Quantity</td>
+                                        <td>@item.TotalPrice</td>
+                                    </tr>
+                                }
+                                <tr>
+                                    <td class="text-black font-weight-bold"><strong>Total Bill</strong></td>
+                                    <td class="text-black font-weight-bold"><strong>@TempData["total"]</strong></td>
+                                </tr>
+                                <tr class="mt-2 text-center">
+                                    <td class="text-black font-weight-bold"><strong>Select a Payment Method</strong></td>
+                                    <td width="30%" class="text-black font-weight-bold mt-3">
+                                        <select name="PaymentType" class="form-control">
+                                            <option>Cash</option>
+                                            <option>Card</option>
+                                            <option>Cheque</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="row d-flex justify-content-end mr-3">
+                            <input type="submit" value="Confirm" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+</div>

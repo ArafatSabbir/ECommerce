@@ -1,0 +1,71 @@
+﻿@using X.PagedList.Mvc.Core; <!--import to get HTML Helper-->
+@using X.PagedList;
+@model IEnumerable<NecessaryDrugs.Web.Areas.Client.Models.MedicineViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container-fluid">
+    <div class="card card-solid">
+        <div class="card-body">
+            <h1>Shop</h1>
+            <div class="row d-flex align-items-stretch">
+
+                @foreach (var item in Model)
+                {
+                    <div class="col-sm-4 col-sm-4">
+                        <div class="card bg-light mb-3">
+                            
+                            <div class=" card-header text-secondary border-bottom-0">
+                                @item.Name
+                            </div>
+                            <div class=" card-body pt-0">
+                                <div class="row">
+                                    <div class="col-sm-6 text-center">
+                                        <a href="/client/cart/addtocart/@item.Id">
+                                            <img class="rounded-lg my-3" src="~/admin/img/@item.Url"
+                                                 style='height:200px; width:200px;'>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6 text-center">
+                                        <h1 class="border mt-3 text-bold"><b>@item.Name</b></h1>
+                                        <p><span class="fas fa-dollar-sign"></span> @item.Price TK</p>
+                                        <a href="/client/cart/addtocart/@item.Id" class="btn btn-sm btn-outline-secondary my-3">
+                                            <i class="fas fa-shopping-cart"></i> Add to cart
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div class="col-12">
+                    <div align="center">
+                        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page = page }),
+                        new X.PagedList.Mvc.Core.Common.PagedListRenderOptions
+                        {
+                            DisplayItemSliceAndTotal = true,
+                            ContainerDivClasses = new[] { "navigation" },
+                            LiElementClasses = new[] { "page-item" },
+                            PageClasses = new[] { "page-link" },
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('ul.pagination > li.disabled > a').addClass('page-link');
+        });
+    </script>
+}

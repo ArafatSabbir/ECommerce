@@ -1,0 +1,61 @@
+﻿@model IEnumerable<NecessaryDrugs.Web.Areas.Admin.Models.StockViewModel>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<h1 class="text-center"><i class="text-success"></i> Stocks</h1>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicineName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                <a onclick="showInPopup('@Url.Action("AddOrEdit","Stock",null,Context.Request.Scheme)','New Stock')" class="btn btn-success text-white"><i class="fas fa-random"></i> Add New Stock</a>
+                @*<button type="submit" onclick="showInPopup('@Url.Action("AddOrEdit","Stock",null,Context.Request.Scheme)','New Stock')" class="btn btn-success text-white">New Stock</button>*@
+                @*<a onclick="showInPopup('@Url.Action("AddOrEdit","Stock",null,Context.Request.Scheme)','New Stock')" class="btn btn-success text-white"><i class="fas fa-random"></i> New Stock</a>*@
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MedicineName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <div>
+                        <a onclick="showInPopup('@Url.Action("AddOrEdit","Stock",new {id=item.Id},Context.Request.Scheme)','Update')" class="btn btn-info text-white"><i class="fas fa-pencil-alt"></i> Edit</a>
+                        @*<a onclick="showInPopup('@Url.Action("AddOrEdit","Stock",null,Context.Request.Scheme)','New Stock')"
+                           class="btn btn-success text-white"><i class="fas fa-random"></i> New Stock</a>
+                        <a onclick="showInPopup('@Url.Action("AddOrEdit","Transaction",new {id=item.TransactionId},Context.Request.Scheme)','Update Transaction')" 
+                           class="btn btn-info text-white"><i class="fas fa-pencil-alt"></i> Edit</a>*@
+                        <form asp-action="Delete" asp-route-id="@item.Id" onsubmit="return jQueryAjaxDelete(this)" class="d-inline">
+                            <input type="submit" value="Delete" class="btn btn-danger" />
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts{
+    
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

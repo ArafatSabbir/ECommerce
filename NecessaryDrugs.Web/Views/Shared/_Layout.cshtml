@@ -1,0 +1,132 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using NecessaryDrugs.Core.Entities
+@inject SignInManager<NormalUser> SignInManager
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>@ViewData["Title"] - NecessaryDrugs.Web</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/client/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="/client/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/client/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/client/css/magnific-popup.css">
+    <link rel="stylesheet" href="/client/css/jquery-ui.css">
+    <link rel="stylesheet" href="/client/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/client/css/owl.theme.default.min.css">
+
+
+    <link rel="stylesheet" href="/client/css/aos.css">
+
+    <link rel="stylesheet" href="/client/css/style.css">
+
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-1 ">
+            <div class="container-fluid">
+                <div class="site-navbar py-2">
+                    <div class="search-wrap">
+                        <div class="container-fluid">
+                            <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+                            <form action="#" method="post">
+                                <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="logo mt-1">
+                                <div class="site-logo">
+                                    <a href="/Home" class="js-logo-clone"><strong class="text-primary">Necessary </strong>Medicines Online</a>
+                                </div>
+                            </div>
+                            <div class="main-nav d-none d-lg-block mx-2">
+                                <nav class="site-navigation text-right text-md-center" role="navigation">
+                                    <ul class="site-menu js-clone-nav d-none d-lg-block">
+                                        <li class="active"><a href="/Home">Home</a></li>
+                                        <li><a href="/client/medicine/index">Store</a></li>
+                                        <li class="has-children">
+                                            <a href="#">Categories</a>
+                                            <ul class="dropdown">
+                                                <li><a href="#">Supplements</a></li>
+                                                <li class="has-children">
+                                                    <a href="#">Vitamins</a>
+                                                    <ul class="dropdown">
+                                                        <li><a href="#">Supplements</a></li>
+                                                        <li><a href="#">Vitamins</a></li>
+                                                        <li><a href="#">Diet &amp; Nutrition</a></li>
+                                                        <li><a href="#">Tea &amp; Coffee</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Diet &amp; Nutrition</a></li>
+                                                <li><a href="#">Tea &amp; Coffee</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="text-danger text-uppercase" href="/Admin">Redirect to Admin area.</a></li>
+                                    </ul>
+
+                                </nav>
+                            </div>
+
+                            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                                <partial name="_LoginPartial" />
+                                <div class="icons mr-3">
+                                    <a href="#" class="icons-btn d-inline-block js-search-open"><span class="fas fa-search"></span></a>
+                                    <a href="/client/cart/cart" class="icons-btn d-inline-block bag">
+                                        <span class="fas fa-shopping-cart ml-1"></span>@if (TempData["cart"] != null)
+                                        {
+                                            TempData.Keep();
+                                            <span class="number">
+                                                @TempData["item_count"]
+                                            </span>
+                                        }
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+     }
+        <main>
+            @RenderBody()
+        </main>
+
+     
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/admin/js/adminlte.js" asp-append-version="true"></script>
+        <script>
+            $("input[type='text']").attr("autocomplete", "off");
+        </script>
+
+
+        <script src="/client/js/jquery-3.3.1.min.js"></script>
+        <script src="/client/js/jquery-ui.js"></script>
+        <script src="/client/js/popper.min.js"></script>
+        <script src="/client/js/bootstrap.min.js"></script>
+        <script src="/client/js/owl.carousel.min.js"></script>
+        <script src="/client/js/jquery.magnific-popup.min.js"></script>
+        <script src="/client/js/aos.js"></script>
+
+        <script src="/client/js/main.js"></script>
+
+
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>

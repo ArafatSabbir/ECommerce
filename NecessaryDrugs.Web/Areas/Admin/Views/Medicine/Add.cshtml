@@ -1,0 +1,121 @@
+﻿@model NecessaryDrugs.Web.Areas.Admin.Models.MedicineUpdateModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Add Medicine";
+}
+@section notification
+{
+    @await Html.PartialAsync("_Notification", Model.Notification)
+}
+<div class="col-md-6">
+    <div class="card">
+        <div class="card-header bg-primary text-uppercase text-white">
+            <h4>Add New Medicine</h4>
+        </div>
+        <div class="card-body">
+            <form enctype="multipart/form-data" asp-controller="Medicine" asp-action="Add" method="post">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label">Name:</label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label">Description:</label>
+                        <textarea asp-for="Description" class="form-control" rows="3" placeholder="About the Medicine..."></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="CategoriesId" class="control-label">Category:</label>
+                        <select asp-for="CategoriesId" multiple class="form-control"
+                                asp-items="@(new SelectList(Model.Categories, "Value", "Text"))">
+                        </select>
+                        <span asp-validation-for="CategoriesId" class="text-danger"></span>
+                    </div>
+                </div>
+                @*<div class="col-md-12">
+                        @Html.LabelFor(x => Model.CategoriesId, htmlAttributes:
+                       new { @class = "control-label col-md-2" })
+
+                        @Html.DropDownListFor(x => Model.CategoriesId,
+                          new SelectList(Model.Categories, "Value", "Text"),
+                          htmlAttributes: new { @class = "form-control", id = "CategoriesId", @required = true })
+                        @Html.ValidationMessageFor(x => x.CategoriesId, "", new { @class = "text-danger" })
+                    </div>*@
+                @*<div class="col-md-12">
+                        @Html.DropDownListFor(x => Model.Categories2, new SelectList(Model.Categories, "Value", "Text"),
+                       htmlAttributes: new { @class = "form-control", id = "Category" })
+                        @Html.ValidationMessageFor(x => x.Categories2, "", new { @class = "text-danger" })
+                    </div>*@
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="Price" class="control-label">Price:</label>
+                        <input asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label asp-for="DisountType" class="control-label">Discount Type:</label>
+                                <select asp-for="DisountType" class="form-control">
+                                    <option value="">Choose a Discount Type</option>
+                                    <option value="FixedAmountDiscount">Fixed Amount Discount</option>
+                                    <option value="PercentageDiscount">Percentage Discount</option>
+                                </select>
+                                <span asp-validation-for="DisountType" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="form-group">
+                                <label asp-for="AmountOrPercentage" class="control-label">Amount/Percentage:</label>
+                                <input asp-for="AmountOrPercentage" class="form-control" />
+                                <span asp-validation-for="AmountOrPercentage" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="Image" class="control-label">Medicine Image:</label>
+                        <div class="custom-file">
+                            <input asp-for="Image" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                        </div>
+                        <span asp-validation-for="Image" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div align="right" class="form-group">
+                        <input type="submit" value="submit" class="btn btn-sm btn-primary text-uppercase" />
+                        <a asp-action="~/admin/category/Index" class="btn btn-sm btn-primary bg-primary text-uppercase text-white"> Back to List</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function () {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+}
+
+
+
+
+

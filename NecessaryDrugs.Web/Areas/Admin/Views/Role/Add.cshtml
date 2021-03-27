@@ -1,0 +1,43 @@
+﻿@model NecessaryDrugs.Web.Areas.Admin.Models.RoleUpdateModel
+@{
+    ViewData["Title"] = "Add Category";
+}
+@section scripts
+{
+
+}
+@section notification
+{
+    @await Html.PartialAsync("_Notification", Model.Notification)
+}
+<div class="container-fluid">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Add a new Role</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form role="form" action="~/admin/role/add" method="post">
+                    @Html.AntiForgeryToken()
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Role Name</label>
+                            <input type="text" class="form-control" name="RoleName" id="roleName" placeholder="Enter name">
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
+
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--/.col (left) -->
+    </div>
+    <!-- /.row -->
+</div><!-- /.container-fluid -->

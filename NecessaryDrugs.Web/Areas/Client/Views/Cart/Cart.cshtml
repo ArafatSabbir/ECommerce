@@ -1,0 +1,90 @@
+﻿@model IList<NecessaryDrugs.Web.Areas.Client.Models.CartModel>
+@{
+    ViewData["Title"] = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="site-wrap">
+    @if (TempData["item_count"] == null)
+     {
+         TempData.Keep();
+         <div class="text-center">
+             <h1 class="text-dark mx-2 my-1">Cart is empty</h1>
+             <a class="btn btn-outline-primary mx-2 my-4" href="@Url.Action("Index", "Medicine")">Back To Shop</a>
+         </div>
+     }
+    else
+    {
+        <div class="site-section">
+            <div class="container">
+                <div class="site-blocks-table">
+                    <h2 class="text-dark">Shopping Cart</h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="product-thumbnail">Image</th>
+                                <th class="product-name">Product</th>
+                                <th class="product-price">Price</th>
+                                <th class="product-quantity">Quantity</th>
+                                <th class="product-total">Total</th>
+                                <th class="product-remove">Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="product-thumbnail">
+                                        <img class="rounded-lg my-1" src="~/admin/img/@item.MedImgUrl"
+                                                style='height:100px; width:100px;'>
+                                    </td>
+                                    <td class="product-name">
+                                        <h2 class="h5 text-black">@item.MedName</h2>
+                                    </td>
+                                    <td>@item.UnitPrice</td>
+                                    <td>@item.Quantity</td>
+                                    <td>@item.TotalPrice</td>
+                                    <td><a href="@Url.Action("Remove", "Cart", new { id = item.MedicineId })" class="btn btn-primary height-auto btn-sm">X</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="row d-flex justify-content-end">
+                    <div class="col-md-4 col-md-4 mr-3">
+                        <div class="row">
+                            <div class="col-md-12 text-right border-bottom mb-5">
+                                <h3 class="text-black h4 text-uppercase text-center">Cart Totals</h3>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <span class="text-black">Total Items : </span>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <strong class="text-black">@TempData["item_count"]</strong>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-6">
+                                <span class="text-black">Total Bill : </span>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <strong class="text-black">@TempData["total"] TK</strong>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a href="@Url.Action("Checkout", "Cart")" class="btn btn-primary btn-lg btn-block">
+                                    Proceed To
+                                    Checkout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,9 @@
+/.vs
+obj
+bin
+*.suo
+*.config
+/.vs/NecessaryDrugs/DesignTimeBuild/.dtbcache.v2
+NecessaryDrugs.Data.csproj.nuget.dgspec.json
+/NecessaryDrugs.Data/obj
+/NecessaryDrugs.Data/bin

@@ -1,0 +1,56 @@
+﻿@model NecessaryDrugs.Web.Areas.Client.Models.MedicineViewModel
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <div class="p-4">
+        <div class="col-md-4 p-2 bg-white text-center" style="border:solid">
+            <input type="hidden" asp-for="id" name="id" value="@Model.Id" />
+            <h2>@Model.Name</h2>
+            <hr />
+            <dl class="text-left row">
+                <dt class="col-sm-3">
+                    Image :
+                </dt>
+                <dd class="col-sm-9">
+                    <img class="my-2" src="~/admin/img/@Model.Url"
+                         asp-append-version="true" style='height:250px; width:300px;'>
+                </dd>
+                <dt class="col-sm-3">
+                    Price :
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Price) TK
+                </dd>
+                <dt class="col-sm-3">
+
+                </dt>
+                <dd class="col-sm-9">
+                    <form action="/client/cart/addtocart" method="post">
+                        <input type="hidden" name="id" value="@Model.Id" />
+                        <input class="col-md-3 col-sm-4 m-2" name="quantity" placeholder="Quantity" value="1" type="number" min="1" max="1000" />
+                        <input type="submit" value="Add to Cart" class="btn btn-warning" />
+                    </form>
+
+                </dd>
+                <dt class="col-sm-3">
+                    Description :
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+            </dl>
+            <div>
+                <a class="btn btn-outline-info" href="/client/medicine/index" asp-action="Index">Back to List</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
