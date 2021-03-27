@@ -44,39 +44,39 @@ The following is required to run the program.
 **ENJOY!**
 
 ## Features
-**1. At first sight **
-At first run a Sign Up / Log In form will open if you are not logged in. 
+**1. At first sight ** <br />
+At first run a Sign Up / Log In form will open if you are not logged in.  <br />
 
-***1.1 Sign Up Form***
+***1.1 Sign Up Form*** <br />
 <img src="https://github.com/ArafatSabbir/ECommerce/blob/31389530cef5106601e4c49b446a4904007f41d2/Demo%20of%20the%20Project/SignUpForm.png" height=300 align=center>
 
-***1.2 Log In Form***
+***1.2 Log In Form*** <br />
 <img src="https://github.com/ArafatSabbir/ECommerce/blob/ef09c28397dbad083e1fb73b401c25f37c3ed31f/Demo%20of%20the%20Project/LoginForm.PNG" height=300 align=center>
 
-***1.3 Home Page***
+***1.3 Home Page*** <br />
 If you are logged in Home Page will open. 
 <img src="https://github.com/ArafatSabbir/ECommerce/blob/ef09c28397dbad083e1fb73b401c25f37c3ed31f/Demo%20of%20the%20Project/Home%20Page.PNG" height=300 align=center>
 
-**2. Admin DashBoard**
+**2. Admin DashBoard** <br />
 <img src="https://github.com/ArafatSabbir/ECommerce/blob/ef09c28397dbad083e1fb73b401c25f37c3ed31f/Demo%20of%20the%20Project/Admin%20Dashboard.PNG" height=300 align=center>
 
-***2.1 Add Category***
+***2.1 Add Category*** <br />
 <img src="https://github.com/ArafatSabbir/ECommerce/blob/ef09c28397dbad083e1fb73b401c25f37c3ed31f/Demo%20of%20the%20Project/AddCatForm.png" height=300 align=center>
 
-***2.2 Add Medicine***
+***2.2 Add Medicine*** <br />
 <img src="https://github.com/ArafatSabbir/ECommerce/blob/ef09c28397dbad083e1fb73b401c25f37c3ed31f/Demo%20of%20the%20Project/Add%20New%20Medicine.PNG" height=300 align=center>
 
-**3. Web** 
-***3.1 Shop***
+**3. Web**  <br />
+***3.1 Shop*** <br />
 <img src="https://github.com/ArafatSabbir/ECommerce/blob/ef09c28397dbad083e1fb73b401c25f37c3ed31f/Demo%20of%20the%20Project/Medicine%20Store.PNG" height=300 align=center>
 
-***3.2 Product Details***
+***3.2 Product Details*** <br />
 <img src="https://github.com/ArafatSabbir/ECommerce/blob/ef09c28397dbad083e1fb73b401c25f37c3ed31f/Demo%20of%20the%20Project/Detatils%20of%20a%20Medicine.PNG" height=300 align=center>
 
-***3.3 Shopping Cart***
+***3.3 Shopping Cart*** <br />
 <img src="https://github.com/ArafatSabbir/ECommerce/blob/ef09c28397dbad083e1fb73b401c25f37c3ed31f/Demo%20of%20the%20Project/Shopping%20Cart.PNG" height=300 align=center>
 
-***3.4 Invoice***
+***3.4 Invoice*** <br />
 <img src="https://github.com/ArafatSabbir/ECommerce/blob/ef09c28397dbad083e1fb73b401c25f37c3ed31f/Demo%20of%20the%20Project/Invoice.PNG" height=300 align=center>
 
 
