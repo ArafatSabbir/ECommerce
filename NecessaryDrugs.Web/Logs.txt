@@ -137,3 +137,5 @@ System.NullReferenceException: Object reference not set to an instance of an obj
    at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
 2021-03-27 17:43:09.062 +06:00 [INF] Starting up
+2021-03-27 19:18:21.137 +06:00 [INF] Starting up
+2021-03-27 19:20:10.607 +06:00 [INF] User logged in.
